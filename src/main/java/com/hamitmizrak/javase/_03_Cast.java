@@ -1,6 +1,7 @@
 package com.hamitmizrak.javase;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class _03_Cast {
     public static void main(String[] args) {
@@ -67,7 +68,20 @@ public class _03_Cast {
         System.out.println(rastgele);
 
         // ÖRNEK:
+        // 1 ile Kullanıcıdan alınan sayıya kadar olacak şekilde
+        // !!!! dikkat kullanıcının vereceği sayı 1'den büyük olmak zorundadır !!!!
         // Rastgele 5 tane sayıyı toplayan algoritma yapınız ?
+        Scanner klavye=new Scanner(System.in);
+        Random randomData=new Random();
+        System.out.println("Lütfen bitiş sayısını giriniz ancak 1'den büyük olmalıdır.");
+        int end= klavye.nextInt();
+        int number1=randomData.nextInt(end)+1;
+        int number2=randomData.nextInt(end)+1;
+        int number3=randomData.nextInt(end)+1;
+        int number4=randomData.nextInt(end)+1;
+        int number5=randomData.nextInt(end)+1;
+        System.out.println(number1+" "+number2+" "+number3+" "+number4+" "+number5);
+        System.out.println(number1+number2+number3+number4+number5);
 
     }
 }
