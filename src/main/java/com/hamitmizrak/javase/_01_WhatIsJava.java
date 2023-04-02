@@ -16,6 +16,20 @@ public class _01_WhatIsJava {
         String $_degiskenAdi44;
         //sayılarla başlanmaz $_ haricinde =>  özel simgelerle başlanmaz.
 
+        //Operator
+        System.out.println("Topla => "+(6+3));
+        System.out.println("Çıkarma => "+(6-3));
+        System.out.println("Çarpma => "+(6*3));
+        System.out.println("Bölme => "+(6/3));
+        System.out.println("Bölümenden kalan => "+(6%3));
+
+        // &&  || !
+        // > >= < <=
+        int count=0;
+        count=count+1;
+        count+=1;
+        count++;
+
         //Datatypes
         //Tamsayılar
          byte b1=10;
@@ -35,5 +49,7 @@ public class _01_WhatIsJava {
         //Character
         char c4='@';
         System.out.println(c4);
+
+
     }
 }
