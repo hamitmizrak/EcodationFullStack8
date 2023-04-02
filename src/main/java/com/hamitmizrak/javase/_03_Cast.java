@@ -1,5 +1,7 @@
 package com.hamitmizrak.javase;
 
+import java.util.Random;
+
 public class _03_Cast {
     public static void main(String[] args) {
         // Primitive Type ile Wrapper arasındaki fark ?
@@ -46,8 +48,23 @@ public class _03_Cast {
         System.out.println(Math.round(6.5));
         System.out.println(Math.sin(45));
 
+        // ÖDEV:
+        // hipotenüs
+        // Kullanıcıdan alınan 2 sayı üçgenin dik kenarlarıdır hipotenüs uzunluğunu
+        // bulalım
+        // 1.dikkenar:3
+        // 2.dikkenar:4
+        // hipotenüs: 3*3+4*4 => karekökü
+
+
 
         //Random Class
+        System.out.println(Math.random()*3+1);
+        System.out.println(Math.floor(Math.random()*3+1) );
+
+        Random random=new Random();
+        int rastgele=random.nextInt(3)+1;
+        System.out.println(rastgele);
 
     }
 }
