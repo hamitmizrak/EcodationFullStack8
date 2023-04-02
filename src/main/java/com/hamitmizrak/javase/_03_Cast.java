@@ -66,5 +66,8 @@ public class _03_Cast {
         int rastgele=random.nextInt(3)+1;
         System.out.println(rastgele);
 
+        // ÖRNEK:
+        // Rastgele 5 tane sayıyı toplayan algoritma yapınız ?
+
     }
 }
