@@ -43,5 +43,10 @@ public class _02_Examples {
         System.out.println("Bölme => "+((number1/number2)));
         System.out.println("Bölümenden kalan => "+((number1%number2)));
 
+        // VKİ: Vucut Kitle indeksi:
+        // Kullanıcıdan aldığımız Boy ve Kilo'a göre VKİ hesaplayan algoritma yazınız ?
+        // Formül ==> vki=kilo/boy*boy
+        // Tips: double değişkeni ile yapabilirsiniz
+
     }
 }
