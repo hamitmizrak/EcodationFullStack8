@@ -30,7 +30,7 @@ public class _02_Examples {
         // bölme/çıkarma/çarpma/toplama/bölümünden kalan(%)
 
         //SCANNER
-        Scanner klavye=new Scanner(System.in);
+        java.util.Scanner klavye=new Scanner(System.in);
         int number1,number2;
         System.out.println("Lütfen bir sayı giriniz");
         number1=klavye.nextInt();
@@ -47,6 +47,13 @@ public class _02_Examples {
         // Kullanıcıdan aldığımız Boy ve Kilo'a göre VKİ hesaplayan algoritma yazınız ?
         // Formül ==> vki=kilo/boy*boy
         // Tips: double değişkeni ile yapabilirsiniz
+        double height,weight,vki;
+        System.out.println("\nLütfen Kilonuzu giriniz");
+        weight=klavye.nextDouble();
+        System.out.println("Lütfen Boyunuzu sayı giriniz");
+        height=klavye.nextDouble();
+        vki=height/weight*weight;
+        System.out.println("Vki: "+vki);
 
     }
 }
