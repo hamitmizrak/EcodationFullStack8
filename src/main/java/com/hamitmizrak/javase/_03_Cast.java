@@ -82,7 +82,7 @@ public class _03_Cast {
         System.out.println(number1+" "+number2+" "+number3+" "+number4+" "+number5);
         System.out.println(number1+number2+number3+number4+number5);
 
-        // W3school ?
+        // W3School ?
         // String nedir ?
         // StringBuilder StringTokenize
         // Conditional (if-else)
