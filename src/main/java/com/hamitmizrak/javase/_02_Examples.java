@@ -52,7 +52,7 @@ public class _02_Examples {
         weight=klavye.nextDouble();
         System.out.println("Lütfen Boyunuzu sayı giriniz");
         height=klavye.nextDouble();
-        vki=height/weight*weight;
+        vki=height/(weight*weight);
         System.out.println("Vki: "+vki);
 
     }
