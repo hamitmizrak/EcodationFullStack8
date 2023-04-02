@@ -34,5 +34,20 @@ public class _03_Cast {
         System.out.println(kelime3+15);
         System.out.println(kelime4+15);
 
+        //MATH:static yapıdır.
+        System.out.println(Math.min(10,100));
+        System.out.println(Math.max(10,100));
+        System.out.println(Math.sqrt(100));
+        System.out.println(Math.pow(2,5));
+        System.out.println(Math.abs(-5));
+        System.out.println(Math.floor(4.9));
+        System.out.println(Math.ceil(4.1));
+        System.out.println(Math.round(6.4));
+        System.out.println(Math.round(6.5));
+        System.out.println(Math.sin(45));
+
+
+        //Random Class
+
     }
 }
