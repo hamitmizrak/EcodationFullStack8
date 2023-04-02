@@ -58,7 +58,6 @@ public class _03_Cast {
         // hipotenüs: 3*3+4*4 => karekökü
 
 
-
         //Random Class
         System.out.println(Math.random()*3+1);
         System.out.println(Math.floor(Math.random()*3+1) );
@@ -82,6 +81,14 @@ public class _03_Cast {
         int number5=randomData.nextInt(end)+1;
         System.out.println(number1+" "+number2+" "+number3+" "+number4+" "+number5);
         System.out.println(number1+number2+number3+number4+number5);
+
+        // W3school ?
+        // String nedir ?
+        // StringBuilder StringTokenize
+        // Conditional (if-else)
+        // debug nedir ? intellij idea
+        // Loop (for-while-dowhile)
+        // for Each döngüsü
 
     }
 }
