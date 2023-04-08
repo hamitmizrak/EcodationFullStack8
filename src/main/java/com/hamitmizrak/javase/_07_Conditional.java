@@ -3,8 +3,7 @@ package com.hamitmizrak.javase;
 public class _07_Conditional {
 
     // debug nedir ? intellij idea
-    // Loop (for-while-dowhile)
-    // for Each döngüsü
+
     public static void main(String[] args) {
         // Conditional (if-else)
         int number=5;
