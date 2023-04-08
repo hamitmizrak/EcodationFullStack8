@@ -3,10 +3,7 @@ package com.hamitmizrak.javase;
 public class _04_String {
     // String nedir ?
     // StringBuilder StringTokenize
-    // Conditional (if-else)
-    // debug nedir ? intellij idea
-    // Loop (for-while-dowhile)
-    // for Each döngüsü
+
 
     public static void main(String[] args) {
         String vocabulary="Java öğreniyorum Java ";
