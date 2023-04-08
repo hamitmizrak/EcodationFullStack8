@@ -1,22 +1,38 @@
 package com.hamitmizrak.javase;
 
+import java.util.Random;
+
 public class Examples {
 
     // AKLINDA BİR SAYI
     // Bir sayi söylüyoruz ve çıkan sonucu tahmin ediyoruz.
     // ipucu: sonuc her zaman 11 cıkıyor.
     // kullanıcıdan alınan sayının sonucu tahmin etmek
-    // adım1: 1-100 arasında bir sayı olsun
+    // adım1: 1-100 arasında bir sayı olsun
     // adım1: Bu sayiyi 2 ile çarpın
-    // adım2: sonuca 22 ekleyin// adım3: cikan sonucu 2 ile bolelim
-    // adım4: bu sayiyi ilk sayidan çıkarın
+    // adım2: sonuca 22 ekleyin
+    // adım3: cikan sonucu 2 ile bolelim
+    // adım4: ilk sayidan çıkarın bu sayiyi
 
     // Kullanıcı tarafından girilen haftanın gününü bulan algoritma
     // 1=pazartesi 2=salı ... 7=Pazar (switch-case)
 
-    // Örnek: 1-10 arasında 5 tane random sayı üretelim ve bunları toplayalım?
+    // Örnek: 1-9 arasında 5 tane random sayı üretelim ve bunları toplayalım?
     // initial data sıfır toplamada etkisiz eleman
-
+    // for , sum=0
+    public static void main(String[] args) {
+        Random random=new Random();
+        int sum=0;
+        int number;
+        String randomNumber="";
+        for (int i = 0; i <5 ; i++) {
+            number= random.nextInt(9)+1;
+            randomNumber+=number+" ";
+            sum+=number;
+        }
+        System.out.println(randomNumber);
+        System.out.println(sum);
+    }
 
 
 
