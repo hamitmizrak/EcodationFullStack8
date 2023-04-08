@@ -1,6 +1,9 @@
 package com.hamitmizrak.javase;
 
+import org.springframework.http.converter.json.GsonBuilderUtils;
+
 import java.util.Random;
+import java.util.Scanner;
 
 public class Examples {
 
@@ -17,10 +20,11 @@ public class Examples {
     // Kullanıcı tarafından girilen haftanın gününü bulan algoritma
     // 1=pazartesi 2=salı ... 7=Pazar (switch-case)
 
-    // Örnek: 1-9 arasında 5 tane random sayı üretelim ve bunları toplayalım?
-    // initial data sıfır toplamada etkisiz eleman
-    // for , sum=0
+
     public static void main(String[] args) {
+        // Örnek: 1-9 arasında 5 tane random sayı üretelim ve bunları toplayalım?
+        // initial data sıfır toplamada etkisiz eleman
+        // for , sum=0
         Random random=new Random();
         int sum=0;
         int number;
@@ -32,6 +36,28 @@ public class Examples {
         }
         System.out.println(randomNumber);
         System.out.println(sum);
+
+
+
+        // Örnek-3 (anlamak)
+        // girilen karakter harf mi , sayı mı , özel simge mi ?
+        // Character.isDigit => SAYI
+        // Character.isLetter => HARF
+        Scanner scanner=new Scanner(System.in);
+        /*while(true){}
+        for(;;){}*/
+        while(true){
+            System.out.println("\nLütfen bir simge giriniz");
+            char data=scanner.nextLine().charAt(0);
+            if(Character.isDigit(data)){
+                System.out.println("Bu bir sayıdır");
+            } else if(Character.isLetter(data)){
+                System.out.println("Bu bir harftir");
+            } else{
+                System.out.println("Özel simge");
+            }
+        }
+
     }
 
 
@@ -61,10 +87,8 @@ public class Examples {
     // ipucu: charAt, substring, indexOf, döngü, karar mekanizma
 
 
-    // Örnek-3 (anlamak)
-    // girilen karakter harf mi , sayı mı , özel simge mi ?
-    // Character.isDigit => SAYI
-    // Character.isLetter => HARF
+
+
 
 
     // ÖDEV
