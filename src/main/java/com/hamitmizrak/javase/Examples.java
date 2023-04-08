@@ -84,10 +84,6 @@ public class Examples {
     // ipucu: charAt, substring, indexOf, döngü, karar mekanizma
 
 
-
-
-
-
     // ÖDEV
     // Kullanıcı tarafından alınan bir sayıya göre ceza kesilecektir.
     // Hızı:79 kadar ise para cezası  : 0 TL      ==>  1<=speed<=79
