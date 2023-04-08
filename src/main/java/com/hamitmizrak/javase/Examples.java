@@ -57,10 +57,7 @@ public class Examples {
                 System.out.println("Özel simge");
             }
         }
-
     }
-
-
 
     //ÖDEV
     // Vize Final Ödevi
