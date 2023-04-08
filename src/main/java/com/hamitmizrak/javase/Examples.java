@@ -11,12 +11,13 @@ public class Examples {
     // adım2: sonuca 22 ekleyin// adım3: cikan sonucu 2 ile bolelim
     // adım4: bu sayiyi ilk sayidan çıkarın
 
+    // Kullanıcı tarafından girilen haftanın gününü bulan algoritma
+    // 1=pazartesi 2=salı ... 7=Pazar (switch-case)
+
     // Örnek: 1-10 arasında 5 tane random sayı üretelim ve bunları toplayalım?
     // initial data sıfır toplamada etkisiz eleman
 
 
-    // Kullanıcı tarafından girilen haftanın gününü bulan algoritma
-    // 1=pazartesi 2=salı ... 7=Pazar (switch-case)
 
 
     //ÖDEV
@@ -36,7 +37,7 @@ public class Examples {
     // while sonsuz döngü   ==> while(true) {}
     // for sonsuz döngü     ==> for(;;) {}
 
-    //ÖDEV
+    // ÖDEV
     // kullanıcıdan aldığımız isim soyisim (boşluk var)
     // ilk karakter göstersin sonraki kelimeleri masking (maskeleme yapsın)
     // eğer kullanıcı isim ve soyisimi ilk karakteri küçük girmişse büyük olsun mutlaka
