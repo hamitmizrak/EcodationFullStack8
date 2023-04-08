@@ -83,12 +83,7 @@ public class _03_Cast {
         System.out.println(number1+number2+number3+number4+number5);
 
         // W3School ?
-        // String nedir ?
-        // StringBuilder StringTokenize
-        // Conditional (if-else)
-        // debug nedir ? intellij idea
-        // Loop (for-while-dowhile)
-        // for Each döngüsü
+
 
     }
 }
