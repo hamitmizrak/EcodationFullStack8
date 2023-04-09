@@ -1,5 +1,6 @@
 package com.hamitmizrak.javase;
 
+// Enum:Tür güvenliğini sağlar.
 public enum _14_Enum {
     PAZAR,PAZARTESI,SALI,CARSAMBA,PERSEMBE,CUMA,CUMARTESI
 }

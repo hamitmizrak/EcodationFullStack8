@@ -45,9 +45,6 @@ public class _13_Recursive {
         iterativeFaktoriyel(number);
         System.out.println(recursiveFaktoriyel(number));
 
-        // Enum
-        // Diziler
-        // inner class
-        // File
+
     }
 }
