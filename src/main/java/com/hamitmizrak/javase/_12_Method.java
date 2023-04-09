@@ -32,6 +32,7 @@ public class _12_Method {
         // UUID
         // Recursive
         // Faktöriyel(iterative, recursive)
+
         // Enum
         // Diziler
         // inner class
