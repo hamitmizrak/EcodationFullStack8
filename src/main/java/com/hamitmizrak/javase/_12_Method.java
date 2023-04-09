@@ -16,10 +16,14 @@ public class _12_Method {
 
         System.out.println("Lütfen Kullanıcı Adınız Giriniz");
         username = klavye.nextLine();
+        String firstLetter,lastLetter;
+        firstLetter = username.substring(0,1).toUpperCase();
+        lastLetter = username.substring(1,username.length()).toLowerCase();
+        username=firstLetter.concat(lastLetter);
 
         System.out.println("Lütfen Kullanıcı Soyadınız Giriniz");
         surname = klavye.nextLine().toUpperCase();
-        return username.concat(surname);
+        return username.concat(" ").concat(surname);
     }
 
     public static void main(String[] args) throws IOException, IndexOutOfBoundsException, ArithmeticException, HamitMizrakException {
