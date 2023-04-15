@@ -1,13 +1,6 @@
 package com.hamitmizrak.javase;
 
-// inner class
-// File
-// Serileştirme
-// OOP (class,interface,inheritabce,abstract)
-// Generics
-// Collection
-// Java8 (Stream API)
-// Thread
+
 public class _15_Diziler {
 
     public static void main(String[] args) {
