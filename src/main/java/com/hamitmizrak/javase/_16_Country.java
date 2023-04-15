@@ -2,13 +2,9 @@ package com.hamitmizrak.javase;
 
 
 // inner class
-// File
 // Serileştirme
-// OOP (class,interface,inheritabce,abstract)
-// Generics
-// Collection
-// Java8 (Stream API)
-// Thread
+
+
 
 import lombok.Getter;
 import lombok.Setter;
