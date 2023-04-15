@@ -1,5 +1,6 @@
 package com.hamitmizrak.javase;
 
+import java.util.Arrays;
 import java.util.Random;
 
 // inner class
@@ -23,6 +24,10 @@ public class _15_Diziler2 {
             dizi[i]=number;
         }
 
+        // Bu dizide En küçük eleman nedir ?
+        // Bu dizide En büyük eleman nedir ?
+        // Bu dizide eleman toplamları nedir ?
+        Arrays.sort(dizi);
 
         //for each
         for (int temp : dizi) {
