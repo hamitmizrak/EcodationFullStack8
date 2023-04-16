@@ -10,9 +10,8 @@ import java.util.Scanner;
 // OOP (class,interface,inheritance,abstract)
 // Java8 (Stream API)
 //
-// Dosya yazmak dosya okumak
-//        //FileWriter BufferedWriter
-//        //FileReader BufferedReader
+
+//
 public class _18_File2 {
 
     //araştırma: final kullanım alanları nelerdir ?
@@ -23,7 +22,9 @@ public class _18_File2 {
         Scanner klavye = new Scanner(System.in);
         System.out.println("Lütfen bir şeyler yazınız");
         String user = klavye.nextLine();
-        //user coding continue..
+        // ser coding continue..
+        // sistem tarihini ekleme yaparak yazılsın.
+        // [12/05/2023] nasılsın
         return user;
     }
 
