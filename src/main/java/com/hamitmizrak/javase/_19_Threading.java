@@ -28,12 +28,17 @@ public class _19_Threading extends Thread{
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         _19_Threading thread1=new _19_Threading("1.thread ==>");
         _19_Threading thread2=new _19_Threading("2.thread ==>");
         _19_Threading thread3=new _19_Threading("3.thread ==>");
         thread1.start();
         thread2.start();
+
+        //join: öncelikle 1 ve2 bitsin
+        thread1.join();
+        thread2.join();
+
         thread3.start();
     }
 }
