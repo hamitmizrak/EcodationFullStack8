@@ -4,14 +4,6 @@ import java.io.*;
 import java.util.Scanner;
 
 // File
-// Thread
-// Generics
-// Collection
-// OOP (class,interface,inheritance,abstract)
-// Java8 (Stream API)
-//
-
-//
 public class _18_File2 {
 
     //araştırma: final kullanım alanları nelerdir ?
