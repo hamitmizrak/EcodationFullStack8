@@ -1,23 +1,22 @@
 package com.hamitmizrak.javase;
 
-// Thread
-// kalıtım yoluyla
-
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
-public class _19_Threading extends Thread{
+// arayüz (interface)
+@Getter
+@Setter
+public class _19_Threading2 implements Runnable {
+
     private String threadName;
 
-    public _19_Threading(String threadName) {
+    public _19_Threading2(String threadName) {
         this.threadName = threadName;
     }
 
-
     @Override
     public void run() {
-        for (int i = 1; i <=10 ; i++) {
+        for (int i = 1; i <= 10; i++) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -27,18 +26,18 @@ public class _19_Threading extends Thread{
         }
     }
 
+
     public static void main(String[] args) throws InterruptedException {
-        _19_Threading thread1=new _19_Threading("1.thread ==>");
-        _19_Threading thread2=new _19_Threading("2.thread ==>");
-        _19_Threading thread3=new _19_Threading("3.thread ==>");
+        Thread thread1 = new Thread(new _19_Threading2("1.thread ==>"));
+        Thread thread2 = new Thread(new _19_Threading2("2.thread ==>"));
+        Thread thread3 = new Thread(new _19_Threading2("3.thread ==>"));
+
         thread1.start();
         thread2.start();
-
-        //join: öncelikle 1 ve2 bitsin
+        //Join
         thread1.join();
         thread2.join();
 
         thread3.start();
     }
 }
-
