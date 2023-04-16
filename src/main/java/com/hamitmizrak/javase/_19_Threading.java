@@ -3,6 +3,11 @@ package com.hamitmizrak.javase;
 
 // Thread
 // kalıtım yoluyla
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
 public class _19_Threading extends Thread{
     private String threadName;
 
@@ -10,12 +15,6 @@ public class _19_Threading extends Thread{
         this.threadName = threadName;
     }
 
-    @Override
-    public String toString() {
-        return "_19_Threading{" +
-                "threadName='" + threadName + '\'' +
-                "} " + super.toString();
-    }
 
     @Override
     public void run() {
@@ -25,14 +24,14 @@ public class _19_Threading extends Thread{
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println(i+" ");
+            System.out.println(threadName+" ==> "+i+" ");
         }
     }
 
     public static void main(String[] args) {
         _19_Threading thread1=new _19_Threading("1.thread ==>");
         _19_Threading thread2=new _19_Threading("2.thread ==>");
-        _19_Threading thread3=new _19_Threading("2.thread ==>");
+        _19_Threading thread3=new _19_Threading("3.thread ==>");
         thread1.start();
         thread2.start();
         thread3.start();
@@ -40,7 +39,10 @@ public class _19_Threading extends Thread{
 }
 
 // arayüz (interface)
+@Getter @Setter
  class ThreadingInterface implements Runnable{
+
+    private String threadName;
 
     @Override
     public void run() {
