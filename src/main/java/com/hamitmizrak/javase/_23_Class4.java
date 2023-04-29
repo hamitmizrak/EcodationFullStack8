@@ -23,7 +23,6 @@ import lombok.NoArgsConstructor;
 // zero: sıfır zero ile null aynı şey değildir
 // 0 ile null aynı değildir.
 
-
 // LOMBOK
 @Data
 //@AllArgsConstructor
