@@ -67,7 +67,6 @@ public class _23_Class4 {
         person1.setEmail("Email1");
         person1.setAddress("Address1");
         System.out.println(person1);
-
         System.out.println("***************************");
 
         //instance(new) ==> 2
@@ -85,11 +84,8 @@ public class _23_Class4 {
                 .address("Address3")
                 .build();
         System.out.println(person3);
-
         System.out.println(_23_Class4.CITY);
-
         // Javanın önemli kütüphanesi: java.lang'dir
         Object deneme=new Object();
-
     }
 }
