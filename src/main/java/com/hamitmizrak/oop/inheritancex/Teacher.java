@@ -1,6 +1,5 @@
 package com.hamitmizrak.oop.inheritancex;
 
-
 public class Teacher  extends  Person{
 
     @Override

@@ -1,6 +1,4 @@
 package com.hamitmizrak.oop.inheritancex;
-
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,7 +7,6 @@ import lombok.Setter;
 public class Student  extends  Person{
 
     // yeni bir özellik
-
     private String corona;
 
     // constructor
@@ -29,7 +26,6 @@ public class Student  extends  Person{
     }
 
     //toString
-
     @Override
     public String toString() {
         return "Student{" +
