@@ -29,9 +29,11 @@ package com.hamitmizrak.javase;
 
 
 // OOP prensible
+// MVC nedir ?
 
 // static
 // final
+// finally
 // instance
 // new, null, zero
 // Object
