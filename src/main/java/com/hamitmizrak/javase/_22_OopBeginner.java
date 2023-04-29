@@ -11,6 +11,4 @@ public class _22_OopBeginner {
     // Dummy Code:
     // n-tier architecture:
 
-
-
 }
