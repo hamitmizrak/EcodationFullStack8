@@ -59,21 +59,13 @@ public class SpringMvcProject {
         return "thymeleaf4"; //HTML SAYFASI
     }
 
-
     // http://localhost:2222/mvc/api/redirect5?id=10
     @GetMapping("/redirect5") //URL
-    public String getThymeleaf5(@RequestParam(name = "id",required = false) Long id, Model model) {
-        if (id == null) {
-            model.addAttribute("key_thymeleaf5", "404 NotFound Değer yoktur");
-        } else if (id == 0) {
-            model.addAttribute("key_thymeleaf5", "400 Bad Request Kötü istek");
-        } else {
+    public String getThymeleaf5(@RequestParam(name = "id",required = false,defaultValue = "1") Long id, Model model) {
             RegisterDto registerDto = new RegisterDto(id, "name", "surname");
             model.addAttribute("key_thymeleaf5", registerDto);
-        }
         return "thymeleaf5"; //HTML SAYFASI
     }
-
 
     // http://localhost:2222/mvc/api/redirect6
     @GetMapping("/redirect6") //URL
