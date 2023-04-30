@@ -9,7 +9,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -23,19 +22,31 @@ import java.util.Date;
 public class CustomerDto implements Serializable {
     private final static Long serialVersionUID=1L;
 
+    // ID
     private Long id;
 
+    // NAME
     @NotEmpty(message = "{customer.name.validation.constraints.NotNull.message}")
-    private String username;
+    private String name;
 
+    // SURNAME
+    @NotEmpty(message = "{customer.surname.validation.constraints.NotNull.message}")
+    private String surname;
+
+    // EMAIL
     @NotEmpty(message = "{customer.email.validation.constraints.NotNull.message}")
     @Email
+    // Annotaion
     private String email;
 
+    // PASSWORD
     @NotEmpty(message = "{customer.password.validation.constraints.NotNull.message}")
     @Size(min = 7,max = 20,message ="{customer.password.pattern.validation.constraints.NotNull.message}" )
     @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).*$",message = "{customer.password.pattern.validation.constraints.NotNull.message}")
     private String password;
+
+    private String image;
+    private Object specialObject;
 
     private Date systemDate;
 }
