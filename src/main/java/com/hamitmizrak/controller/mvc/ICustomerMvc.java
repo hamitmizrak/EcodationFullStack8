@@ -3,28 +3,51 @@ package com.hamitmizrak.controller.mvc;
 import com.hamitmizrak.business.dto.CustomerDto;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 //@controller
 public interface ICustomerMvc {
 
-    //Speed Data
-    public String speedData();
-    public String deleteAll();
+    // SPEED DATA
+    // http://localhost:2222//customer/mvc/speed
+    String speedData();
 
-    //CREATE
-    public String customerCreateGet(Model model);
-    public String customerCreatePost(CustomerDto customerDto, BindingResult bindingResult, Model model);
+    // DETETE ALL
+    // http://localhost:2222//customer/mvc/deleteAll
+    String deleteAll();
 
-    //LIST
-    public String customerListGet(Model model);
+    // FAKE LİST
+    List<CustomerDto> fakeList();
 
-    //FIND
-    public String customerFindGet(Long id, Model model);
+    // CREATE GET
+    // http://localhost:2222//customer/mvc/create
+    String customerCreateGet(Model model);
 
-    //DELETE
-    public String customerDeleteGet(Long id, Model model);
+    // CREATE POST
+    // http://localhost:2222//customer/mvc/create
+    String customerCreatePost(CustomerDto customerDto, BindingResult bindingResult, Model model);
 
-    //UPDATE
-    public String customerUpdateGet(Long id,Model model);
-    public String customerUpdatePost(Long id,CustomerDto customerDto, BindingResult bindingResult, Model model);
+    // LIST
+    // http://localhost:2222//customer/mvc/list
+    String customerListGet(Model model);
+
+    // FIND
+    // http://localhost:2222//customer/mvc/find/1
+    String customerFindGet( Long id, Model model);
+
+    // DELETE
+    // http://localhost:2222//customer/mvc/delete/1
+    String customerDeleteGet(Long id, Model model);
+
+    // UPDATE GET
+    // http://localhost:2222/customer/mvc/update/1
+    String customerUpdateGet(Long id, Model model);
+
+    // UPDATE POST
+    // http://localhost:2222/customer/mvc/update/1
+    String customerUpdatePost(Long id, CustomerDto customerDto, BindingResult bindingResult, Model model);
 }
