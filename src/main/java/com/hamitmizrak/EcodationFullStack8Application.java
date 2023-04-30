@@ -13,16 +13,15 @@ import java.util.TimeZone;
 // @EnableJpaRepositories(basePackages ="com.hamitmizrak.data.repository" ) //Repository bulamadığı zaman
 
 // Spring Security
-/*
+
 @SpringBootApplication(exclude = {
         //SecurityAutoConfiguration.class,
         org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
         org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration.class
 }
 )
-*/
 
-@SpringBootApplication
+/*@SpringBootApplication*/
 public class EcodationFullStack8Application {
     @PostConstruct
     public void init() {
