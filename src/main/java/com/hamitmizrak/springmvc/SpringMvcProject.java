@@ -1,6 +1,6 @@
 package com.hamitmizrak.springmvc;
 
-import com.hamitmizrak.dto.RegisterDto;
+import com.hamitmizrak.business.dto.RegisterDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
