@@ -13,9 +13,7 @@ import lombok.extern.log4j.Log4j2;
 @Builder
 @Log4j2
 public class RegisterDto {
-
     private Long id;
     private String name;
     private String surname;
-
 }
