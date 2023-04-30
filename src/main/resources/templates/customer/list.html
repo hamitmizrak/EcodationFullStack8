@@ -43,7 +43,53 @@
     <h1 class="text-primary">CRUD</h1>
 
 
+    <a th:href="@{/customer/create}" class="btn btn-primary">EKLE</a>
+    <a th:href="@{/customer/speed}" class="btn btn-secondary">Hızlı Ekle</a>
+    <a th:href="@{/customer/deleteAll}" th:onclick="if(!(confirm('Bütün Verileri silmek istiyor musunuz ?'))) return false" class="btn btn-danger">
+        <i class="fa-solid fa-trash"></i>
+    </a>
+    <a th:href="@{/logout44}">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </a>
 
+    <div th:if="${customer_list}!=null" class="container my-5">
+        <table class="table table-hover table-striped" id="datalistregisterTable">
+            <thead>
+            <tr>
+                <th class="text-uppercase" th:text="#{id}"></th>
+                <th class="text-uppercase" th:text="#{customer.username}"></th>
+                <th class="text-uppercase" th:text="#{customer.email}"></th>
+                <th class="text-uppercase" th:text="#{customer.password}"></th>
+                <th class="text-uppercase" th:text="#{date}"></th>
+                <th class="text-uppercase">Kim Ekledi</th>
+                <th class="text-uppercase">Kim Günledi</th>
+                <th class="text-uppercase" th:text="#{update}"></th>
+                <th class="text-uppercase" th:text="#{show}"></th>
+                <th class="text-uppercase" th:text="#{delete}"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:if="${cust.id>0}" th:each="cust:${customer_list}">
+                <td th:text="${cust.id}"></td>
+                <td th:text="${cust.username}"></td>
+                <td th:text="${cust.email}"></td>
+                <td th:text="${cust.password}"></td>
+                <td th:text="${cust.systemDate}"></td>
+                <td>HamitM</td>
+                <td>HamitM</td>
+                <td>
+                    <a class="btn btn-primary" th:href="@{/customer/mvc/update/{id}(id=${cust.id})}"><i class="fa-regular fa-pen-to-square"></i></a>
+                </td>
+                <td>
+                    <a class="btn btn-warning" th:href="@{/customer/mvc/find/{id}(id=${cust.id})}"><i class="fa-regular fa-eye"></i></a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" th:href="@{/customer/mvc/delete/{id}(id=${cust.id})}"><i class="fa-solid fa-trash"></i></a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
     <!-- ends codes -->
     <!-- dataTables JS: paging and sorting -->
