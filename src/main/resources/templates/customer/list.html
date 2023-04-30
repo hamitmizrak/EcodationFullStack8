@@ -40,6 +40,13 @@
 
 <body class="container">
     <!-- start codes -->
+
+    <!--Alert modelAttributesTemp-->
+    <div th:if="${customer_list}!=null" class="alert alert-primary alert-dismissible fade show mt-5" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <strong th:text="${modelAttributesTemp}"></strong>
+    </div>
+
     <h1 class="text-primary mt-5">LIST</h1>
 
     <a th:href="@{/customer/create}" class="btn btn-primary">EKLE</a>

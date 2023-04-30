@@ -27,7 +27,7 @@ public class CustomerMvcImpl implements ICustomerMvc{
     private String modelAttributesTemp=null;
 
     // Injection
-     private final ICustomerServices customerServices;
+     //private final ICustomerServices customerServices;
 
     // SPEED DATA
     // http://localhost:2222/customer/mvc/speed
@@ -93,6 +93,7 @@ public class CustomerMvcImpl implements ICustomerMvc{
     public String customerListGet(Model model) {
         model.addAttribute("customer_list",fakeList());
         modelAttributesTemp="Listelendi =>";
+        model.addAttribute("modelAttributesTemp",modelAttributesTemp);
         return "customer/list";
     }
 
