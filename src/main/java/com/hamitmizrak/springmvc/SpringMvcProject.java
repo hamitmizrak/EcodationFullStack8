@@ -4,6 +4,7 @@ import com.hamitmizrak.dto.RegisterDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -42,4 +43,20 @@ public class SpringMvcProject {
         model.addAttribute("key_thymeleaf3",registerDto);
         return "thymeleaf3"; //HTML SAYFASI
     }
+
+    // http://localhost:2222/mvc/api/redirect4
+    // http://localhost:2222/mvc/api/redirect4/44
+    @GetMapping({"/redirect4","/redirect4/{id}"}) //URL
+    public String getThymeleaf4(@PathVariable(name="id",required = false) Long id, Model model){
+        if(id==null){
+            model.addAttribute("key_thymeleaf4","404 NotFound Değer yoktur");
+        }else if(id==0){
+            model.addAttribute("key_thymeleaf4","400 Bad Request Kötü istek");
+        }else{
+            RegisterDto registerDto=new RegisterDto(id,"name","surname");
+            model.addAttribute("key_thymeleaf4",registerDto);
+        }
+        return "thymeleaf4"; //HTML SAYFASI
+    }
+
 }

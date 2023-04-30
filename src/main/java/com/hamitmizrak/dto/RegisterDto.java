@@ -17,4 +17,5 @@ public class RegisterDto {
     private Long id;
     private String name;
     private String surname;
+
 }
