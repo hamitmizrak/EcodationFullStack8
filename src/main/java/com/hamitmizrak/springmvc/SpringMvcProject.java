@@ -3,10 +3,7 @@ package com.hamitmizrak.springmvc;
 import com.hamitmizrak.dto.RegisterDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,16 +60,31 @@ public class SpringMvcProject {
     }
 
 
-    // http://localhost:2222/mvc/api/redirect5
+    // http://localhost:2222/mvc/api/redirect5?id=10
     @GetMapping("/redirect5") //URL
-    public String getThymeleaf5(Model model) {
+    public String getThymeleaf5(@RequestParam(name = "id",required = false) Long id, Model model) {
+        if (id == null) {
+            model.addAttribute("key_thymeleaf5", "404 NotFound Değer yoktur");
+        } else if (id == 0) {
+            model.addAttribute("key_thymeleaf5", "400 Bad Request Kötü istek");
+        } else {
+            RegisterDto registerDto = new RegisterDto(id, "name", "surname");
+            model.addAttribute("key_thymeleaf5", registerDto);
+        }
+        return "thymeleaf5"; //HTML SAYFASI
+    }
+
+
+    // http://localhost:2222/mvc/api/redirect6
+    @GetMapping("/redirect6") //URL
+    public String getThymeleaf6(Model model) {
         List<RegisterDto> registerDtoList = new ArrayList<>();
         for (int i = 1; i <= 9; i++) {
             RegisterDto registerDto = new RegisterDto(Long.valueOf(i), "name " + i, "surname " + i);
             registerDtoList.add(registerDto);
         }
-        model.addAttribute("key_thymeleaf5", registerDtoList);
-        return "thymeleaf5"; //HTML SAYFASI
+        model.addAttribute("key_thymeleaf6", registerDtoList);
+        return "thymeleaf6"; //HTML SAYFASI
     }
 
 }
