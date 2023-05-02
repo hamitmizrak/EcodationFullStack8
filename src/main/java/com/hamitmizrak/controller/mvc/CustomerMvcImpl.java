@@ -27,15 +27,15 @@ public class CustomerMvcImpl implements ICustomerMvc{
     private String modelAttributesTemp=null;
 
     // Injection
-     //private final ICustomerServices customerServices;
+    private final ICustomerServices iCustomerServices;
 
     // SPEED DATA
     // http://localhost:2222/customer/mvc/speed
     @Override
     @GetMapping("/speed")
     public String speedData() {
-        modelAttributesTemp="5 tane veri eklendi";
-        return "redirect:/customer/list";
+        modelAttributesTemp= iCustomerServices.speedData().size()+ "tane veri eklendi";
+        return "redirect:/customer/mvc/list";
     }
 
     // DELETE ALL
@@ -43,8 +43,9 @@ public class CustomerMvcImpl implements ICustomerMvc{
     @Override
     @GetMapping("/deleteAll")
     public String deleteAll() {
+        iCustomerServices.deleteAll();
         modelAttributesTemp="Bütün Veriler Silindi";
-        return "redirect:/customer/list";
+        return "redirect:/customer/mvc/list";
     }
 
     // FAKE LİST
@@ -82,8 +83,8 @@ public class CustomerMvcImpl implements ICustomerMvc{
             @Valid @ModelAttribute("customer_create") CustomerDto customerDto,
             BindingResult bindingResult,
             Model model) {
-        modelAttributesTemp="Eklendi CustomerDto =>";
-        return "redirect:/customer/list";
+        modelAttributesTemp="Eklendi CustomerDto =>"+iCustomerServices.customerCreate(customerDto);
+        return "redirect:/customer/mvc/list";
     }
 
     // LIST
@@ -91,9 +92,8 @@ public class CustomerMvcImpl implements ICustomerMvc{
     @Override
     @GetMapping("/list")
     public String customerListGet(Model model) {
-        model.addAttribute("customer_list",fakeList());
-        modelAttributesTemp=fakeList().size()+" tane veri Listelendi ";
-        model.addAttribute("modelAttributesTemp",modelAttributesTemp);
+        model.addAttribute("customer_list",iCustomerServices.customerList());
+        model.addAttribute("modelAttributesTemp",iCustomerServices.customerList().size()+" tane veri Listelendi ");
         return "customer/list";
     }
 
@@ -102,6 +102,7 @@ public class CustomerMvcImpl implements ICustomerMvc{
     @Override
     @GetMapping("/find/{id}")
     public String customerFindGet(@PathVariable(name = "id") Long id, Model model) {
+        modelAttributesTemp="Bulundu "+ iCustomerServices.customerFind(id);
         return "customer/view";
     }
 
@@ -110,8 +111,8 @@ public class CustomerMvcImpl implements ICustomerMvc{
     @Override
     @GetMapping("/delete/{id}")
     public String customerDeleteGet(@PathVariable(name = "id") Long id, Model model) {
-        modelAttributesTemp="Silindi";
-        return "redirect:/customer/list";
+        modelAttributesTemp="Silindi "+iCustomerServices.customerDelete(id);
+        return "redirect:/customer/mvc/list";
     }
 
     // UPDATE GET
@@ -132,7 +133,7 @@ public class CustomerMvcImpl implements ICustomerMvc{
     public String customerUpdatePost(
             @PathVariable(name = "id") Long id,
             @Valid @ModelAttribute("customer_update") CustomerDto customerDto, BindingResult bindingResult, Model model) {
-        modelAttributesTemp=id + " Güncellendi "+customerDto;
-        return "redirect:/customer/list";
+        modelAttributesTemp=id + " Güncellendi "+iCustomerServices.customerUpdate(id,customerDto);
+        return "redirect:/customer/mvc/list";
     }
 } //end class
