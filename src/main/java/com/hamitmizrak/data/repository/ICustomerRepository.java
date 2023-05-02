@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ICustomerRepository extends JpaRepository<CustomerEntity,Long> {
 
-    //delivered Query
+    //Delivered Query
+    CustomerEntity findByEmail(String email); // database email bulmak için
 }
