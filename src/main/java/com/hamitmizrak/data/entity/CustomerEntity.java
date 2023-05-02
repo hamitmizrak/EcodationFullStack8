@@ -18,12 +18,7 @@ import java.util.Date;
 // ENTITY
 @Entity
 @Table(name = "customer")
-public class CustomerEntity implements Serializable {
-
-    // ID
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //unique id
-    private Long id;
+public class CustomerEntity extends BaseEntity implements Serializable {
 
     // NAME
     private String name;
@@ -51,9 +46,4 @@ public class CustomerEntity implements Serializable {
 
     @Transient // Database bunu ekleme
     private Object specialObject;
-
-    // DATE
-    @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date systemDate;
 }
