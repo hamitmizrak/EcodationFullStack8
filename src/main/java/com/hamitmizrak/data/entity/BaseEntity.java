@@ -1,5 +1,6 @@
 package com.hamitmizrak.data.entity;
 
+import com.hamitmizrak.audit.AuditingBase;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +13,7 @@ import java.util.Date;
 
 // Super
 @MappedSuperclass
-abstract public class BaseEntity {
+abstract public class BaseEntity extends AuditingBase {
 
     // ID
     @Id
