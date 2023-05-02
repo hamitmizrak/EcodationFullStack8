@@ -92,7 +92,7 @@ public class CustomerMvcImpl implements ICustomerMvc{
     @GetMapping("/list")
     public String customerListGet(Model model) {
         model.addAttribute("customer_list",fakeList());
-        modelAttributesTemp="Listelendi =>";
+        modelAttributesTemp=fakeList().size()+" tane veri Listelendi ";
         model.addAttribute("modelAttributesTemp",modelAttributesTemp);
         return "customer/list";
     }
