@@ -1,10 +1,21 @@
 package com.hamitmizrak.data.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import java.io.Serializable;
 import java.util.Date;
 
+// LOMBOK
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+
+// ENTITY
 @Entity
 @Table(name = "customer")
 public class CustomerEntity implements Serializable {
