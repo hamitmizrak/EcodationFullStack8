@@ -1,8 +1,6 @@
 package com.hamitmizrak.business.services;
-
 import com.hamitmizrak.business.dto.CustomerDto;
 import com.hamitmizrak.data.entity.CustomerEntity;
-
 import java.util.List;
 
 public interface ICustomerServices {
@@ -16,6 +14,12 @@ public interface ICustomerServices {
 
     // DELETE ALL
     public  void deleteAll();
+
+    // SORTING PAGING
+    List<CustomerDto>  customerSortingAsc();
+    List<CustomerDto>  customerSortingDesc();
+    List<CustomerDto>  customerPaging(int page, int size);
+
 
     // CREATE POST
     CustomerDto customerCreate(CustomerDto customerDto);

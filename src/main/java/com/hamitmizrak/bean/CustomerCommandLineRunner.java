@@ -33,6 +33,7 @@ public class CustomerCommandLineRunner {
 
     //3.YOL => Lombok Constructor Injection
     private final ICustomerRepository iCustomerRepository;
+    private final PasswordEncoderBean passwordEncoderBean;
 
     @Bean
     public CommandLineRunner customerAutomaticData() {
@@ -42,7 +43,7 @@ public class CustomerCommandLineRunner {
                         .name("adı"+i)
                         .surname("soyadı"+i)
                         .email(UUID.randomUUID().toString()+"@gmail.com")
-                        .password("password"+i)
+                        .password(passwordEncoderBean.passwordEncoderMethod().encode("root"))
                         .build();
                 iCustomerRepository.save(customerEntity);
             } //end for

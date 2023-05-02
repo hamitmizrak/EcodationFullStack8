@@ -1,6 +1,7 @@
 package com.hamitmizrak.business.services.imp;
 
 import com.hamitmizrak.bean.ModelMapperBean;
+import com.hamitmizrak.bean.PasswordEncoderBean;
 import com.hamitmizrak.business.dto.CustomerDto;
 import com.hamitmizrak.business.services.ICustomerServices;
 import com.hamitmizrak.data.entity.CustomerEntity;
@@ -22,6 +23,7 @@ public class CustomerServicesImpl implements ICustomerServices {
     // injection
     private final ICustomerRepository iCustomerRepository;
     private final ModelMapperBean modelMapperBean;
+    private final PasswordEncoderBean passwordEncoderBean;
 
 
     // MODEL MAPPER
@@ -44,7 +46,7 @@ public class CustomerServicesImpl implements ICustomerServices {
             CustomerEntity customerEntity = CustomerEntity.builder()
                     .name("name" + i)
                     .surname("surname" + i)
-                    .password("password" + i)
+                    .password(passwordEncoderBean.passwordEncoderMethod().encode("root"))
                     .email(UUID.randomUUID().toString().concat("@gmail.com"))
                     .build();
             iCustomerRepository.save(customerEntity);
@@ -63,9 +65,27 @@ public class CustomerServicesImpl implements ICustomerServices {
         iCustomerRepository.deleteAll();
     }
 
+    //SORTING / PAGING
+    @Override
+    public List<CustomerDto> customerSortingAsc() {
+        return null;
+    }
+
+    @Override
+    public List<CustomerDto> customerSortingDesc() {
+        return null;
+    }
+
+    @Override
+    public List<CustomerDto> customerPaging(int page, int size) {
+        return null;
+    }
+
     // CREATE
     @Override
     public CustomerDto customerCreate(CustomerDto customerDto) {
+        // password masking
+        customerDto.setPassword(passwordEncoderBean.passwordEncoderMethod().encode(customerDto.getPassword()));
         CustomerEntity customerEntity=DtoToEntity(customerDto);
         iCustomerRepository.save(customerEntity);
         customerDto.setId(customerEntity.getId());
@@ -106,6 +126,9 @@ public class CustomerServicesImpl implements ICustomerServices {
     // UPDATE
     @Override
     public CustomerDto customerUpdate(Long id, CustomerDto customerDto) {
+        // password masking
+        customerDto.setPassword(passwordEncoderBean.passwordEncoderMethod().encode(customerDto.getPassword()));
+        // find
         CustomerDto customerDtoFind= customerFind(id);
         CustomerEntity customerEntity=DtoToEntity(customerDtoFind);
         //updated
@@ -118,4 +141,4 @@ public class CustomerServicesImpl implements ICustomerServices {
         customerDto.setId(customerDto.getId());
         return customerDto;
     }
-}
+} // end class
