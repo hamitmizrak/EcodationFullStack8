@@ -46,6 +46,7 @@ public class CustomerEntity implements Serializable {
 
     // IMAGE
     @Lob
+    //@Column(columnDefinition = "varchar(255) default 'resim.jpg'")
     private String image;
 
     @Transient // Database bunu ekleme
