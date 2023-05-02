@@ -2,7 +2,6 @@ package com.hamitmizrak.data.entity;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -28,13 +27,14 @@ public class CustomerEntity implements Serializable {
             updatable = true,
             nullable = true,
             length = 255,
-            columnDefinition ="varchar(255) 'email@gmail.com'" )
+            columnDefinition ="varchar(255) default 'email@gmail.com'" )
     private String email;
 
     // PASSWORD
     private String password;
 
     // IMAGE
+    @Lob
     private String image;
 
     @Transient // Database bunu ekleme
