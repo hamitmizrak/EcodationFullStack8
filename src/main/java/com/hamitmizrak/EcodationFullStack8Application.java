@@ -4,7 +4,6 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-
 import java.util.TimeZone;
 
 // auditorAware icin
@@ -21,7 +20,6 @@ import java.util.TimeZone;
         org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration.class
 }
 )
-
 /*@SpringBootApplication*/
 public class EcodationFullStack8Application {
     @PostConstruct
@@ -33,7 +31,6 @@ public class EcodationFullStack8Application {
     public static void main(String[] args) {
         // devtools active isActive
          //System.setProperty("spring.devtools.restart.enabled","true");
-
 
         // PORT Ayarlamak
         /*

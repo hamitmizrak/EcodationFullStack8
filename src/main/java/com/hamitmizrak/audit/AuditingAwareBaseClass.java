@@ -7,14 +7,14 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
-
 import java.util.Date;
 
 // LOMBOK
 @Data
 
+//SUPER CLASS
 @MappedSuperclass
-public class AuditingBaseClass {
+public class AuditingAwareBaseClass {
     // Auditing: Database hangi kullanıcı ne zaman
     // ne ekledi veya ne güncelledi
 
