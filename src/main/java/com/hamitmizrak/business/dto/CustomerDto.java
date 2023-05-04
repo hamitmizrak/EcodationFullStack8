@@ -47,6 +47,20 @@ public class CustomerDto implements Serializable {
     @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).*$",message = "{customer.password.pattern.validation.constraints.NotNull.message}")
     private String password;
 
+    public CustomerDto(Long id, String name, String surname, String email, String password) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+    }
+
+    public CustomerDto(Long id, String name, String surname) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+    }
+
     private String image;
     private Object specialObject;
 
