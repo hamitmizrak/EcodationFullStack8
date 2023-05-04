@@ -36,7 +36,7 @@ public class CustomerDto implements Serializable {
 
     // EMAIL
     @NotEmpty(message = "{customer.email.validation.constraints.NotNull.message}")
-    @Email
+    @Email(message = "{customer.email.validation.regex.constraints.NotNull.message}")
     // Kendi ==> Annotation
     @UniqueEmail
     private String email;
