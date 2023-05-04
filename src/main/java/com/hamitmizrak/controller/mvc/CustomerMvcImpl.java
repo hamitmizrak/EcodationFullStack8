@@ -80,7 +80,7 @@ public class CustomerMvcImpl implements ICustomerMvc{
     @Override
     @PostMapping("/create")
     public String customerCreatePost(
-            @Valid @ModelAttribute("customer_create") CustomerDto customerDto,
+            @ModelAttribute("customer_create") CustomerDto customerDto,
             BindingResult bindingResult,
             Model model) {
         modelAttributesTemp="Eklendi CustomerDto =>"+iCustomerServices.customerCreate(customerDto);
@@ -103,6 +103,7 @@ public class CustomerMvcImpl implements ICustomerMvc{
     @GetMapping("/find/{id}")
     public String customerFindGet(@PathVariable(name = "id") Long id, Model model) {
         modelAttributesTemp="Bulundu "+ iCustomerServices.customerFind(id);
+        model.addAttribute("find_key",iCustomerServices.customerFind(id));
         return "customer/view";
     }
 
@@ -121,9 +122,9 @@ public class CustomerMvcImpl implements ICustomerMvc{
     @GetMapping("/update/{id}")
     public String customerUpdateGet(@PathVariable(name = "id") Long id, Model model) {
         modelAttributesTemp=id + " numaralı veri yoktur";
-        CustomerDto customerDto=null;
-        model.addAttribute("customer_update",customerDto);
-        return "customer/update";
+
+        model.addAttribute("customer_update",iCustomerServices.customerFind(id));
+        return "/customer/update";
     }
 
     // UPDATE POST
@@ -132,7 +133,7 @@ public class CustomerMvcImpl implements ICustomerMvc{
     @PostMapping("/update/{id}")
     public String customerUpdatePost(
             @PathVariable(name = "id") Long id,
-            @Valid @ModelAttribute("customer_update") CustomerDto customerDto, BindingResult bindingResult, Model model) {
+            @ModelAttribute("customer_update") CustomerDto customerDto, BindingResult bindingResult, Model model) {
         modelAttributesTemp=id + " Güncellendi "+iCustomerServices.customerUpdate(id,customerDto);
         return "redirect:/customer/mvc/list";
     }
