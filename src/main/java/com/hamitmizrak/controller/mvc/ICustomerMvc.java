@@ -12,7 +12,7 @@ public interface ICustomerMvc {
     // http://localhost:2222/customer/mvc/speed
     String speedData();
 
-    // DETETE ALL
+    // DELETE ALL
     // http://localhost:2222/customer/mvc/deleteAll
     String deleteAll();
 

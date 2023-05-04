@@ -1,4 +1,4 @@
-package com.hamitmizrak.controller.jdbctemplate;
+package com.hamitmizrak.jdbctemplate;
 import com.hamitmizrak.business.dto.CustomerDto;
 import java.util.List;
 import java.util.Optional;

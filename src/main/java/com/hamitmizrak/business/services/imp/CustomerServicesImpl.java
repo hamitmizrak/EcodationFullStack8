@@ -126,7 +126,7 @@ public class CustomerServicesImpl implements ICustomerServices {
     // UPDATE
     @Override
     public CustomerDto customerUpdate(Long id, CustomerDto customerDto) {
-        // password masking
+        // password masking root
         customerDto.setPassword(passwordEncoderBean.passwordEncoderMethod().encode(customerDto.getPassword()));
         // find
         CustomerDto customerDtoFind= customerFind(id);

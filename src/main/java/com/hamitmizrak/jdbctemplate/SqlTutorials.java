@@ -1,4 +1,4 @@
-package com.hamitmizrak.controller.jdbctemplate;
+package com.hamitmizrak.jdbctemplate;
 
 public class SqlTutorials {
     /*

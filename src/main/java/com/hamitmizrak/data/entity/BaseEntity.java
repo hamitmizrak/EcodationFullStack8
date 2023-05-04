@@ -24,4 +24,5 @@ abstract public class BaseEntity extends AuditingAwareBaseClass {
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     private Date systemDate;
+
 }

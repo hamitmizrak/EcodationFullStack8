@@ -1,18 +1,11 @@
 package com.hamitmizrak.bean;
 
-import com.hamitmizrak.business.dto.CustomerDto;
-import com.hamitmizrak.controller.jdbctemplate.ICustomerJdbcTemplate;
+import com.hamitmizrak.jdbctemplate.ICustomerJdbcTemplate;
 import lombok.extern.log4j.Log4j2;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.logging.Logger;
 
 @Log4j2
 
