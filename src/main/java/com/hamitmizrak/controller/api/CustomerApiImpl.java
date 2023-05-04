@@ -23,30 +23,35 @@ public class CustomerApiImpl implements ICustomerApi {
     // injection
     private final ICustomerServices customerServices;
 
+
     // SPEED DATA
+    // http://localhost:2222/customer/api/v1/speed
     @Override
+    @GetMapping("/speed")
     public ResponseEntity<List<CustomerDto>> speedData() {
         return ResponseEntity.ok(customerServices.speedData());
     }
 
     // DELETE ALL
+    // http://localhost:2222/customer/api/v1/deleteAll
     @Override
+    @GetMapping("/deleteAll")
     public ResponseEntity<?> deleteAll() {
         customerServices.deleteAll();
         return ResponseEntity.ok("Bütün datalar silindi.");
     }
 
     // CREATE POST
-    // http://localhost:2222/customer/api/create/v1
+    // http://localhost:2222/customer/api/v1/create
     @Override
-    @PostMapping("/create/v1")
+    @PostMapping("/create")
     @Transactional // create, delete,update
     public ResponseEntity<CustomerDto> customerCreatePost(@Valid @RequestBody CustomerDto customerDto) {
         return ResponseEntity.ok(customerServices.customerCreate(customerDto));
     }
 
     // LIST
-    // http://localhost:2222/customer/api/list/v1
+    // http://localhost:2222/customer/api/v1/list
     @Override
     @GetMapping("/list")
     @Cacheable(value = "customerListCacheable")
@@ -74,11 +79,11 @@ public class CustomerApiImpl implements ICustomerApi {
     }
 
     // UPDATE POST
-    // http://localhost:2222/customer/api/v1/delete/1
+    // http://localhost:2222/customer/api/v1/update/1
     @Override
     @PutMapping("/update/{id}")
     @Transactional // create, delete,update
-    public ResponseEntity<CustomerDto> customerUpdatePost(@PathVariable(name="id") Long id,@Valid @RequestBody CustomerDto customerDto) {
+    public ResponseEntity<CustomerDto> customerUpdatePost(@PathVariable(name="id") Long id, @Valid @RequestBody CustomerDto customerDto) {
         return ResponseEntity.ok(customerServices.customerUpdate(id,customerDto));
     }
 }

@@ -2,7 +2,6 @@ package com.hamitmizrak.controller.api;
 
 import com.hamitmizrak.business.dto.CustomerDto;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import java.util.List;
 
 public interface ICustomerApi {
@@ -15,7 +14,7 @@ public interface ICustomerApi {
     // http://localhost:2222/customer/api/v1/deleteAll
     ResponseEntity<?> deleteAll();
 
-    // CREATE POST
+    // CREATE
     // http://localhost:2222/customer/api/v1/create
     ResponseEntity<CustomerDto> customerCreatePost(CustomerDto customerDto);
 
@@ -31,7 +30,7 @@ public interface ICustomerApi {
     // http://localhost:2222/customer/api/v1/delete/1
     ResponseEntity<CustomerDto> customerDelete(Long id);
 
-    // UPDATE POST
+    // UPDATE
     // http://localhost:2222/customer/api/v1/update/1
     ResponseEntity<CustomerDto> customerUpdatePost(Long id, CustomerDto customerDto);
 }
