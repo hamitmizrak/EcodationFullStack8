@@ -1,4 +1,4 @@
-package com.hamitmizrak.controller.api;
+package com.hamitmizrak.caching;
 
 import com.hamitmizrak.business.dto.CustomerDto;
 import org.springframework.cache.annotation.Cacheable;
