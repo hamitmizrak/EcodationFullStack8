@@ -61,6 +61,11 @@ public class CustomerDto implements Serializable {
         this.surname = surname;
     }
 
+    public CustomerDto(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+
     private String image;
     private Object specialObject;
 
