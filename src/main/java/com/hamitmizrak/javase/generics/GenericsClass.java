@@ -1,4 +1,4 @@
-package com.hamitmizrak.generics;
+package com.hamitmizrak.javase.generics;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.hamitmizrak.oop.abstractx;
+package com.hamitmizrak.javase.oop.abstractx;
 
 public class AbstractMainClass {
     public static void main(String[] args) {

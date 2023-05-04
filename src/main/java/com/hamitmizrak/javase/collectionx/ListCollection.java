@@ -1,4 +1,4 @@
-package com.hamitmizrak.collectionx;
+package com.hamitmizrak.javase.collectionx;
 
 import java.util.Collections;
 import java.util.LinkedList;

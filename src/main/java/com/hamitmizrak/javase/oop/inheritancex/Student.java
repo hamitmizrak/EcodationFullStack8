@@ -1,4 +1,4 @@
-package com.hamitmizrak.oop.inheritancex;
+package com.hamitmizrak.javase.oop.inheritancex;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,4 +1,4 @@
-package com.hamitmizrak.oop.abstractx;
+package com.hamitmizrak.javase.oop.abstractx;
 import lombok.Getter;
 import lombok.Setter;
 

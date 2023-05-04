@@ -1,6 +1,6 @@
-package com.hamitmizrak.oop.interfacex;
+package com.hamitmizrak.javase.oop.interfacex;
 
-public class MysqlDatabase implements IDatabaseCrud{
+public class MssqlDatabase implements IDatabaseCrud{
     @Override
     public void create() {
 

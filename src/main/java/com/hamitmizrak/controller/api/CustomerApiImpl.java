@@ -44,8 +44,8 @@ public class CustomerApiImpl implements ICustomerApi {
     // CREATE POST
     // http://localhost:2222/customer/api/v1/create
     @Override
-    @PostMapping("/create")
-    @Transactional // create, delete,update
+    @PostMapping(value = "create")
+    //@Transactional // create, delete,update
     public ResponseEntity<CustomerDto> customerCreatePost(@Valid @RequestBody CustomerDto customerDto) {
         return ResponseEntity.ok(customerServices.customerCreate(customerDto));
     }

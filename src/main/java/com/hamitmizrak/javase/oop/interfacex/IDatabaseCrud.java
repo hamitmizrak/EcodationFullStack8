@@ -1,4 +1,4 @@
-package com.hamitmizrak.oop.interfacex;
+package com.hamitmizrak.javase.oop.interfacex;
 
 public interface IDatabaseCrud {
     public void create();

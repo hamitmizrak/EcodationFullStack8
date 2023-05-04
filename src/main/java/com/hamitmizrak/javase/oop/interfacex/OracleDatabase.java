@@ -1,4 +1,4 @@
-package com.hamitmizrak.oop.interfacex;
+package com.hamitmizrak.javase.oop.interfacex;
 
 import java.io.Serializable;
 

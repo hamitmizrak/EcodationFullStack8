@@ -1,4 +1,4 @@
-package com.hamitmizrak.oop.inheritancex;
+package com.hamitmizrak.javase.oop.inheritancex;
 
 public class InheritanceMainClass {
     public static void main(String[] args) {
